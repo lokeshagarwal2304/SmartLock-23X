@@ -1,0 +1,83 @@
+/*
+ * Title: Data Types in C Language
+ * Description: This file provides a detailed overview of the different types of data in C language,
+ * along with examples and explanation of each category.
+ * Author: Lokesh Agarwal
+ * License: MIT
+ */
+
+#include <stdio.h>
+
+int main() {
+    // Basic Data Types
+    int integerVar = 10; // Integer data type
+    float floatVar = 3.14f; // Floating point data type
+    double doubleVar = 3.14159265359; // Double precision floating point
+    char charVar = 'A'; // Character data type
+
+    // Derived Data Types
+    int arr[5] = {1, 2, 3, 4, 5}; // Array
+    struct Point {
+        int x;
+        int y;
+    }; // Structure
+    union Data {
+        int i;
+        float f;
+    }; // Union
+    enum Week {Mon, Tue, Wed, Thu, Fri, Sat, Sun}; // Enum
+
+    // Void Data Type
+    void printHello(); // Function returning void
+
+    // Printing the basic data types
+    printf("Integer: %d\n", integerVar);
+    printf("Float: %.2f\n", floatVar);
+    printf("Double: %.10f\n", doubleVar);
+    printf("Character: %c\n", charVar);
+
+    // Accessing derived data type
+    struct Point p1 = {10, 20};
+    printf("Structure: Point(%d, %d)\n", p1.x, p1.y);
+
+    union Data d1;
+    d1.i = 100;
+    printf("Union (int): %d\n", d1.i);
+    d1.f = 98.6;
+    printf("Union (float): %.2f\n", d1.f); // Overwrites previous
+
+    enum Week today = Wed;
+    printf("Enum Day Index: %d\n", today);
+
+    return 0;
+}
+
+void printHello() {
+    printf("Hello from a void function!\n");
+}
+
+/*
+ * Detailed Description:
+ *
+ * 1. **Primary/Built-in Data Types**:
+ *    - int: stores integers
+ *    - float: stores single-precision floating point numbers
+ *    - double: stores double-precision floating point numbers
+ *    - char: stores single characters
+ *
+ * 2. **Derived Data Types**:
+ *    - Arrays: collection of similar types
+ *    - Structures: user-defined grouping of different data types
+ *    - Unions: like structures but memory is shared among members
+ *    - Enums: used to assign names to integral constants
+ *
+ * 3. **Void Type**:
+ *    - Used for functions that return nothing
+ *    - Also used to define generic pointers: void *ptr;
+ *
+ * 4. **Modifiers**:
+ *    - short, long, signed, unsigned: modify the size and sign of integer types
+ *
+ * 5. **Type Qualifiers**:
+ *    - const, volatile, restrict: define how variables can be accessed
+ */
