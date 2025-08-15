@@ -1,0 +1,20 @@
+# Bluetooth Hardware Setup (HC-05 Example)
+
+## Components
+- HC-05 Bluetooth Module
+- Arduino Uno / Mega
+- Jumper Wires
+
+## Pin Connections (HC-05 to Arduino UNO)
+| HC-05 Pin | Arduino UNO Pin |
+|-----------|-----------------|
+| VCC       | 5V              |
+| GND       | GND             |
+| TXD       | D2 (RX via voltage divider) |
+| RXD       | D3 (TX)         |
+| EN        | Not Connected   |
+
+## Notes
+- HC-05 default baud rate: 9600
+- Use AT commands to rename device & set PIN.
+- Serial data can be used to send unlock commands from mobile app to C program.
