@@ -1,0 +1,18 @@
+# Fingerprint Sensor Hardware Setup (R305/ZFM-20 Example)
+
+## Components
+- R305 / ZFM-20 Fingerprint Sensor
+- Arduino Uno / Mega
+- Jumper Wires
+
+## Pin Connections (R305 to Arduino UNO)
+| Fingerprint Pin | Arduino UNO Pin |
+|-----------------|-----------------|
+| VCC             | 5V              |
+| GND             | GND             |
+| TX              | D2              |
+| RX              | D3              |
+
+## Notes
+- Use `Adafruit Fingerprint` library in Arduino IDE.
+- Enroll and verify fingerprints from Arduino, send verification result to C program.
